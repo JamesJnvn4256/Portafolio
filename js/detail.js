@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
         main.innerHTML = `
             <div class="container" style="text-align: center; padding: 100px 0;">
                 <h1>Proyecto no encontrado</h1>
-                <a href="portfolio.html" class="btn">Volver</a>
+                <a href="index.html" class="btn">Volver</a>
             </div>
         `;
         return;
