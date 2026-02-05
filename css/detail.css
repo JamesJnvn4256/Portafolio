@@ -1,0 +1,214 @@
+:root {
+  --primary-red: #dc2626;
+  --primary-red-hover: #b91c1c;
+  --text-primary: #1f2937;
+  --text-secondary: #6b7280;
+  --bg-primary: #ffffff;
+  --bg-secondary: #f9fafb;
+  --bg-card: #ffffff;
+  --border-color: #e5e7eb;
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+  --text-primary: #f9fafb;
+  --text-secondary: #d1d5db;
+  --bg-primary: #111827;
+  --bg-secondary: #1f2937;
+  --bg-card: #374151;
+  --border-color: #4b5563;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header {
+  background: var(--bg-card);
+  box-shadow: var(--shadow);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.back-btn {
+  text-decoration: none;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.back-btn:hover {
+  color: var(--primary-red);
+}
+
+.project-hero {
+  background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+  padding: 60px 0;
+  text-align: center;
+}
+
+.project-title {
+  font-size: 2.5rem;
+  color: var(--primary-red);
+  margin-bottom: 1rem;
+}
+
+.tech-stack {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.tech-tag {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.project-gallery {
+  padding: 40px 0;
+  background: var(--bg-card);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.gallery-img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s;
+  cursor: pointer;
+  display: block; /* Removes bottom space */
+}
+
+.gallery-img:hover {
+  transform: scale(1.02);
+}
+
+.gallery-caption {
+  margin-top: 0.5rem;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.content-section {
+  padding: 40px 0;
+}
+
+.documentation {
+  background: var(--bg-primary); /* Changed to blend better if needed */
+  padding: 0;
+}
+
+/* Lightbox Styles */
+.lightbox-modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-modal.active {
+  display: flex;
+}
+
+.lightbox-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 80vh;
+  object-fit: contain;
+  animation-name: zoom;
+  animation-duration: 0.3s;
+  cursor: zoom-in;
+  transition: transform 0.1s ease-out;
+  transform-origin: center center;
+}
+
+.lightbox-content.zoomed {
+  cursor: zoom-out;
+  transform: scale(2);
+}
+
+#lightbox-caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: auto;
+  margin-top: 10px;
+}
+
+.close-lightbox {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+  z-index: 2001;
+}
+
+.close-lightbox:hover,
+.close-lightbox:focus {
+  color: var(--primary-red);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+
+@media only screen and (max-width: 700px) {
+  .lightbox-content {
+    width: 100%;
+  }
+}

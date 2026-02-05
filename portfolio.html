@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>James Nicolas Velezmoro Navarro - Portfolio</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <nav class="nav container">
+        <div class="logo">JNVN</div>
+        <ul class="nav-links">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#sobre-mi">Sobre Mí</a></li>
+          <li><a href="#experiencia">Experiencia</a></li>
+          <li><a href="#habilidades">Habilidades</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <button class="theme-toggle" onclick="toggleTheme()">
+          <i id="theme-icon" class="fas fa-moon"></i>
+        </button>
+        <button class="mobile-menu" onclick="toggleMobileMenu()">
+          <i class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="profile-photo-container">
+            <!-- Reemplaza 'assets/profile.jpg' con la ruta de tu foto -->
+            <!-- Si no tienes foto aún, se mostrará la inicial -->
+            <img 
+              src="assets/profile.png" 
+              alt="James Nicolas Velezmoro Navarro" 
+              class="profile-photo"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            />
+            <div class="profile-placeholder" style="display: none;">
+              <i class="fas fa-user"></i>
+            </div>
+          </div>
+          <div class="hero-text">
+            <h1>James Nicolas Velezmoro Navarro</h1>
+            <p class="subtitle">Desarrollador de Software</p>
+            <p>
+              Apasionado por la tecnología y el desarrollo de soluciones innovadoras.
+              Experiencia en desarrollo de software, bases de datos y automatización de procesos.
+            </p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+              <a href="#proyectos" class="btn">Ver Proyectos</a>
+              <a href="#contacto" class="btn btn-outline">Contactar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sobre Mí Section -->
+    <section id="sobre-mi" class="section" style="background: var(--bg-secondary)">
+      <div class="container">
+        <h2 class="section-title">Sobre Mí</h2>
+        <div class="card">
+          <div class="about-grid">
+            <div>
+              <h3 style="margin-bottom: 1.5rem;">Información Personal</h3>
+              <div class="contact-info">
+                <div class="contact-item">
+                  <i class="fas fa-user"></i>
+                  <span>James Nicolas Velezmoro Navarro</span>
+                </div>  
+                <div class="contact-item">
+                  <i class="fas fa-envelope"></i>
+                  <a href="mailto:jnvn425@gmail.com" style="color: var(--text-secondary); text-decoration: none">
+                    jnvn425@gmail.com
+                  </a>
+                </div>
+                <div class="contact-item">
+                  <i class="fas fa-phone"></i>
+                  <a href="tel:+51918498655" style="color: var(--text-secondary); text-decoration: none">
+                    +51 918 498 655
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="about-info">
+              <h3>Perfil Profesional</h3>
+              <p>
+                Soy Egresado de Tecnologías de la Información en el Instituto Superior SISE, actualmente en proceso de titulación, con 
+                una alta vocación, proactividad y fuerte deseo de aprender. Busco integrarme a 
+                una empresa con visión, donde pueda aplicar y ampliar mis conocimientos en 
+                desarrollo de sistemas, automatización de procesos e implementación de 
+                soluciones tecnológicas, contribuyendo activamente al logro de objetivos y al 
+                crecimiento del equipo.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experiencia Section -->
+    <section id="experiencia" class="section">
+      <div class="container">
+        <h2 class="section-title">Experiencia Laboral</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <h3>Programador y Auxiliar Administrativo</h3>
+              <div class="date">
+                <i class="fas fa-calendar"></i> Agosto 2024 - Actualidad
+              </div>
+              <p><strong>Giambar</strong></p>
+              <ul style="padding-left: 20px; color: var(--text-secondary); margin-top: 10px;">
+                <li>Desarrollo de sistemas de escritorio y web, incluyendo sistema de planilla.</li>
+                <li>Automatización de procesos internos (RRHH).</li>
+                <li>Cálculo de planillas, gestión de empleados y soporte en T-Registro.</li>
+                <li>Apoyo contable y gestión en portal SUNAT.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <h3>Asistente de empaquetado y apoyo operativo</h3>
+              <div class="date">
+                <i class="fas fa-calendar"></i> Septiembre 2023 - Junio 2024
+              </div>
+              <p><strong>Restaurante Villa Chicken</strong></p>
+              <p>
+                Funciones de apoyo operativo y empaquetado en el restaurante.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <h3>Apoyo en limpieza y organización</h3>
+              <div class="date">
+                <i class="fas fa-calendar"></i> Agosto 2020 - Octubre 2020
+              </div>
+              <p><strong>Bodega de Abarrotes</strong></p>
+              <p>
+                Labores de organización y mantenimiento de limpieza en el establecimiento.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Habilidades Section -->
+    <section id="habilidades" class="section" style="background: var(--bg-secondary)">
+      <div class="container">
+        <h2 class="section-title">Habilidades Técnicas</h2>
+        <div class="skills-grid">
+        <div class="skills-grid">
+          <div class="card skill-category">
+            <h3><i class="fas fa-code"></i> Lenguajes de Programación</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">C#</span>
+              <span class="skill-tag">PHP</span>
+              <span class="skill-tag">Java</span>
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">JavaScript / TypeScript</span>
+              <span class="skill-tag">HTML/CSS</span>
+            </div>
+          </div>
+          <div class="card skill-category">
+            <h3><i class="fas fa-database"></i> Bases de Datos</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">SQL Server</span>
+              <span class="skill-tag">MySQL</span>
+              <span class="skill-tag">Oracle</span>
+              <span class="skill-tag">Access</span>
+            </div>
+          </div>
+          <div class="card skill-category">
+            <h3><i class="fas fa-laptop-code"></i> Frameworks & Tecnologías</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">.NET (Windows Forms)</span>
+              <span class="skill-tag">Laravel</span>
+              <span class="skill-tag">Angular</span>
+              <span class="skill-tag">Spring Boot</span>
+              <span class="skill-tag">Java Swing</span>
+              <span class="skill-tag">MVC</span>
+            </div>
+          </div>
+          <div class="card skill-category">
+            <h3><i class="fas fa-tools"></i> Herramientas</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Visual Studio</span>
+              <span class="skill-tag">VS Code</span>
+              <span class="skill-tag">NetBeans</span>
+              <span class="skill-tag">Git</span>
+              <span class="skill-tag">Packet Tracer</span>
+            </div>
+          </div>
+          <div class="card skill-category">
+            <h3><i class="fas fa-file-excel"></i> Office & Automatización</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Excel VBA</span>
+              <span class="skill-tag">Word</span>
+              <span class="skill-tag">PowerPoint</span>
+              <span class="skill-tag">Access</span>
+            </div>
+          </div>
+          <div class="card skill-category">
+            <h3><i class="fas fa-graduation-cap"></i> Certificaciones</h3>
+            <div class="skill-tags">
+              <span class="skill-tag" title="Cisco Networking Academy">CCNA: Intro to Networks</span>
+              <span class="skill-tag" title="Cisco Networking Academy">Cybersecurity Essentials</span>
+              <span class="skill-tag" title="Cisco Networking Academy">IT Essentials</span>
+              <span class="skill-tag" title="Cisco Networking Academy">Python Essentials (PCAP)</span>
+              <span class="skill-tag" title="Cisco Networking Academy">Intro to Data Science</span>
+              <span class="skill-tag" title="Cisco Networking Academy">IoT Fundamentals</span>
+              <span class="skill-tag" title="Cisco Networking Academy">Networking Essentials</span>
+              <span class="skill-tag" title="IBM">IBM Watson Assistant (Chatbots)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Proyectos Section -->
+    <section id="proyectos" class="section">
+      <div class="container">
+        <h2 class="section-title">Proyectos</h2>
+        
+        <!-- Filtros de Proyectos -->
+        <div class="projects-controls">
+          <button class="filter-btn active" onclick="filterProjects('all')">
+            Todos
+          </button>
+          <button class="filter-btn" onclick="filterProjects('web')">
+            Web
+          </button>
+          <button class="filter-btn" onclick="filterProjects('desktop')">
+            Escritorio
+          </button>
+          <button class="filter-btn" onclick="filterProjects('automation')">
+            Automatización
+          </button>
+        </div>
+
+        <!-- Grid de Proyectos (Se llenará dinámicamente) -->
+        <div class="projects-grid" id="projects-container">
+          <!-- Los proyectos se cargarán aquí dinámicamente -->
+        </div>
+      </div>
+    </section>
+
+    <!-- CV Download Section -->
+    <section class="cv-download">
+      <div class="container">
+        <h2>Descarga mi CV</h2>
+        <p style="margin-bottom: 2rem">
+          Obtén la versión completa de mi currículum vitae en formato PDF
+        </p>
+        <a href="assets/cv.pdf" class="btn download-btn" download>
+          <i class="fas fa-download"></i>
+          Descargar CV
+        </a>
+      </div>
+    </section>
+
+    <!-- Contacto Section -->
+    <section id="contacto" class="section" style="background: var(--bg-secondary)">
+      <div class="container">
+        <h2 class="section-title">Contacto</h2>
+        <div class="card" style="max-width: 600px; margin: 0 auto; text-align: center">
+          <h3 style="color: var(--primary-red); margin-bottom: 2rem">
+            ¡Hablemos!
+          </h3>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem">
+            Estoy disponible para nuevas oportunidades y proyectos interesantes.
+          </p>
+          <div class="contact-info" style="text-align: left; max-width: 400px; margin: 0 auto">
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:jnvn425@gmail.com" style="color: var(--text-secondary); text-decoration: none">
+                jnvn425@gmail.com
+              </a>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <a href="tel:+51918498655" style="color: var(--text-secondary); text-decoration: none">
+                +51 918 498 655
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/james-velezmoro-navarro-09b2a4305/" title="LinkedIn" target="_blank">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://github.com/JamesJnvn4256" title="GitHub" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://wa.me/51918498655" title="WhatsApp" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+          <a href="mailto:jnvn425@gmail.com" title="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+        <p style="color: var(--text-secondary)">
+          &copy; <span id="year"></span> JNVN. Todos los derechos reservados.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Admin Panel (Botón flotante para gestionar proyectos) -->
+
+    <script src="js/projects.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
